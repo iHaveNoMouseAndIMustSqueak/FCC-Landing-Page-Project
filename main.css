@@ -26,6 +26,10 @@ h1, h2, h3, h4, p {
     margin-bottom: 1.6em;
 }
 
+h1, h2, h3 {
+    text-align: center;
+}
+
 p {
     max-width: 90ch;
 }
@@ -93,11 +97,12 @@ article {
     display: flex; /* Might be able to do this section with grid */
     justify-content: center;
     align-items: stretch;
-    text-align: center;
 }
 
 #cards div {
     width: 33.33333%;
+    display: flex;
+    flex-direction: column;
 }
 
 #cards img {
@@ -106,15 +111,12 @@ article {
     height: 10em; /* Change */
     width: 10em; /* Change */
     border-radius: 50%;
+    align-self: center;
 }
 
 .small-text {
     font-size: 0.75em;
     font-weight: normal;
-}
-
-#cards ul, #cards p{
-    text-align: left;
 }
 
 footer {
