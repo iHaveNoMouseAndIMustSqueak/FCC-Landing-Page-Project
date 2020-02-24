@@ -9,18 +9,76 @@
     </head>
     <body>
         <header id='header'> <!--User Story #1-->
-            <img id='header-img' src='' alt=''> <!--User Story #2--> <!--Might replace with a <picture>-->
+            <img id='header-img' src='' alt=''> <!--User Story #2--> <!--Might replace with a <picture>--> <!--Change-->
             <nav id='nav-bar'> <!--User Story #3-->
-                <a class='nav-link' href='#' alt=''>1.</a>
-                <a class='nav-link' href='#' alt=''>2.</a>
-                <a class='nav-link' href='#' alt=''>3.</a> <!--User Story #4 & #5-->
+                <a class='nav-link' href='#video' alt=''>Video</a>
+                <a class='nav-link' href='#about' alt=''>About</a>
+                <a class='nav-link' href='#cards' alt=''>Pricing</a> <!--User Story #4 & #5-->
             </nav>
         </header>
         <main>
-
+            <article>
+                <section>
+                    <video id='video' controls>
+                        <source src='' type='video/'> <!--Change-->
+                        Your browser does not support the video tag.
+                    </video> <!--User Story #6-->
+                </section>
+                <section id='about'>
+                    <h1>Try This&trade; Today!</h1>
+                    <p>Nostrud irure proident aliquip in magna et fugiat laborum laborum exercitation in esse exercitation occaecat. Deserunt voluptate sunt irure laboris duis nulla. Culpa tempor exercitation adipisicing eiusmod sint nulla sunt. Velit irure ea sunt dolor anim tempor anim esse dolore irure. Voluptate magna non sint nisi consectetur esse anim eu consequat do elit laboris. In cupidatat nostrud mollit do culpa minim.</p>
+                </section>
+                <section id='cards'>
+                   <div>
+                       <img src='' alt=''> <!--Change-->
+                       <h2>Card 1</h2>
+                       <h3>£100 <span class='small-text'>per month</span></h3>
+                       <p>Tempor et qui consectetur ullamco aliquip do exercitation voluptate eiusmod exercitation.</p>
+                       <ul>
+                           <li>Ad pariatur exercitation aliqua consectetur culpa aute nostrud nostrud nostrud elit sint.</li>
+                           <li>Sint incididunt fugiat cillum enim aliqua ad sunt sunt dolore Lorem aliqua aliquip dolore sint.</li>
+                           <li>Velit ad est do voluptate do duis anim.</li>
+                       </ul>
+                   </div>
+                   <div>
+                        <img src='' alt=''> <!--Change-->
+                        <h2>Card 2</h2>
+                        <h3>£150 <span class='small-text'>per month</span></h3>
+                        <p>Pariatur non amet excepteur enim ea irure irure do ea.</p>
+                        <ul>
+                            <li>Amet nostrud sit occaecat dolor aliquip incididunt labore adipisicing.</li>
+                            <li>Ad ipsum commodo nostrud occaecat magna pariatur minim tempor voluptate veniam voluptate.</li>
+                            <li>Incididunt dolor sint nisi fugiat et aliquip ullamco non dolore anim.</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <img src='' alt=''> <!--Change-->
+                        <h2>Card 3</h2>
+                        <h3>£200 <span class='small-text'>per month</span></h3>
+                        <p>Nulla fugiat et ullamco sit eiusmod culpa deserunt enim officia non.</p>
+                        <ul>
+                            <li>Commodo in eiusmod do occaecat irure ipsum consequat occaecat.</li>
+                            <li>Veniam ex ipsum eu elit irure aliqua aliqua fugiat duis voluptate sint enim.</li>
+                            <li>Nostrud deserunt aliqua proident incididunt ut culpa deserunt voluptate id.</li>
+                        </ul>
+                    </div>
+                </section>
+                <section>
+                    <form id='form' action='https://www.freecodecamp.com/email-submit'> <!--User Story #7 & #12-->
+                        <label for='email'>Subscribe to mailing list:</label>
+                        <input id='email' name='email' type='email' placeholder="you@example.com" required> <!--User Story #8, #9 & #10-->
+                        <button id='submit' type="submit">Submit</button> <!--User Story #11-->
+                    </form>
+                </section>
+            </article>
         </main>
         <footer>
-
+            <ul>
+                <li><a href='#'>Privacy</a></li>
+                <li><a href='#'>Legal Stuff</a></li>
+                <li><a href='#'>Contact Us</a></li>
+            </ul>
+            <p>Copyright 2020, This Company</p>
         </footer>
     </body>
 </html>
