@@ -100,12 +100,13 @@ header {
     background: var(--nav-bg);
     padding: .5em 1em;
     box-shadow: var(--header-shadow);
+    height: 4em;
 }
 
 header img {
     background: var(--placeholder); /* Delete/Change */
     height: 3em;
-    width: 20ch;
+    width: 10ch;
 }
 
 nav {
