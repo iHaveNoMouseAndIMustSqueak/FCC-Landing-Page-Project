@@ -1,9 +1,16 @@
 :root{
-    --placeholder: rgb(173, 6, 6);
-    --nav-bg: rgba(49, 49, 49, 0.973);
-    --white: rgb(248, 248, 248);
-    --bg: rgb(155, 155, 155);
+    --placeholder: rgb(12, 22, 160); /* Delete */
+    --nav-bg: rgba(28, 35, 110, 0.95); /* Change */
+    --white: rgb(248, 248, 248); /* Change */
+    --bg: rgb(70, 77, 156); /* Change */
+    --bg-2: rgb(151, 155, 199); /* Change */
     --rounded-corners: 4px;
+    --card-shadow: -1px 2px 3px rgba(20, 20, 20, 0.4); /* Change */
+    --header-shadow: 0px 2px 3px rgba(49, 49, 49, 0.5); /* Change */
+    --green-active: rgb(96, 189, 96); /* Change */
+    --green-inactive: rgba(96, 189, 96, 0.85); /* Change */
+    --one-line: 2.4rem; /* body font-size x line-height */
+    --half-line: 1.2rem;
 }
 
 /* Makes padding and borders make more sense */
@@ -19,15 +26,20 @@ body {
     font-size: 1.6rem;
     line-height: 1.5;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; /* Change */
+    background: var(--bg-2);
 }
 
 h1, h2, h3, h4, p {
     margin-top: 0;
-    margin-bottom: 1.6em;
+    margin-bottom: var(--one-line);
 }
 
 h1, h2, h3 {
     text-align: center;
+}
+
+h3 {
+    font-size: 1em;
 }
 
 p {
@@ -41,7 +53,41 @@ ul {
 }
 
 li {
-    margin-bottom: 1.5em;
+    margin-bottom: var(--one-line);
+}
+
+label[for] {
+    display: block;
+    text-align: center;
+    font-size: 1.25em;
+    font-weight: bold;
+    margin-bottom: var(--half-line);
+}
+
+input {
+    border-radius: var(--rounded-corners);
+}
+
+button, input {
+    font-size: 1.25em;
+    line-height: 2;
+    border-style: none;
+    padding: 0 0.75ch;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+button[type='submit'] {
+    background: var(--green-inactive);
+    color: var(--white);
+    transition: 300ms;
+    border-radius: var(--rounded-corners);
+}
+
+button[type='submit']:hover {
+    background: var(--green-active);
 }
 
 header {
@@ -51,8 +97,9 @@ header {
     position: fixed; /* User Story #13 */
     width: 100%;
     z-index: 1;
-    background: var(--nav-bg); /* Change */
+    background: var(--nav-bg);
     padding: .5em 1em;
+    box-shadow: var(--header-shadow);
 }
 
 header img {
@@ -66,7 +113,7 @@ nav {
 }
 
 nav a {
-    color: var(--white); /* Change */
+    color: var(--white);
     font-size: 1.25em;
     margin-left: 2ch;
     text-decoration: none;
@@ -77,32 +124,78 @@ nav a:hover {
 }
 
 main {
-    padding: 7em 0 3em 0; /* Change */
+    padding: 7em 0 4em 0;
     display: flex;
     justify-content: center;
     color: var(--white);
 }
 
+main video {
+    width: 50vw; /* Delete/Change */
+    min-width: 400px; /* Delete/Change */
+    margin-bottom: var(--one-line);
+}
+
 article {
-    flex: 0 1 60vw; /* Delete if not changed from 0 1 auto */
+    flex: 0 1 auto; /* Delete if not changed from 0 1 auto */
     background: var(--bg); /* Delete/Change */
     border-radius: var(--rounded-corners);
-    padding: 2em;
+    padding: 3em 2em 4em 2em;
     display: flex;
     flex-direction: column;
     align-items: center;
+    box-shadow: var(--card-shadow); /* Delete/Change */
+}
+
+#about {
+    columns: 2 45ch;
+    column-gap: 5ch;
+    margin-bottom: 4.8rem;
+}
+
+#about h1, #about h2, #about p {
+    column-span: all;
+    max-width: 125ch; /* max-width of columns + column-gap */
+    margin-bottom: var(--one-line);
+}
+
+#about p, #about h3 {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#about .columns {
+    column-span: none;
+    max-width: 60ch;
+}
+
+@media (max-height: 800px) { /* Collapses to 1 column when text exceeds height of viewport */
+    #about {
+        columns: 1;
+    }
+
+    #about p, #about .columns {
+        max-width: 100ch;
+    }
 }
 
 #cards {
-    display: flex; /* Might be able to do this section with grid */
+    display: flex;
     justify-content: center;
     align-items: stretch;
+    margin-bottom: var(--one-line);
 }
 
 #cards div {
     width: 33.33333%;
     display: flex;
     flex-direction: column;
+    padding: 3.6rem 1.2rem 1.2rem 1.2rem;
+    margin: 1.2rem;
+    background: var(--bg-2);
+    border-radius: var(--rounded-corners);
+    box-shadow: var(--card-shadow);
+    max-width: 60ch;
 }
 
 #cards img {
@@ -112,6 +205,21 @@ article {
     width: 10em; /* Change */
     border-radius: 50%;
     align-self: center;
+    margin-bottom: var(--one-line);
+    box-shadow: var(--card-shadow);
+}
+
+#cards h2 {
+    margin-bottom: var(--half-line);
+}
+
+#cards p {
+    font-weight: bold;
+}
+
+#cards button {
+    margin-top: auto; /* Pushes to bottom */
+    box-shadow: var(--card-shadow);
 }
 
 .small-text {
@@ -122,10 +230,30 @@ article {
 footer {
     text-align: right;
     padding: 1em;
-    background: var(--bg); /* Change */
+    background: var(--bg);
+    color: var(--white);
+}
+
+footer a {
+    color: var(--white);
+}
+
+footer p {
+    opacity: 0.8;
 }
 
 footer li, footer p {
     display: inline-block;
-    margin: 0;
+    margin: 0 0 0 1ch;
+}
+
+@media (max-width: 850px) { /* Quick test, change later */ /* User Story #14 */
+    #cards {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #cards div {
+        width: 100%;
+    }
 }
